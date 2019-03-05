@@ -13,4 +13,9 @@ public class tester : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void testfunction()
+    {
+
+    }
 }
