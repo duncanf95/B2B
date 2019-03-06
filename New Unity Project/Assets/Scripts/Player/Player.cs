@@ -74,8 +74,8 @@ public class Player : MonoBehaviour
     private void CheckBoundaries()
     {
         
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, xMin, xMax),
-                                        Mathf.Clamp(transform.position.y, yMin, yMax),
-                                        transform.position.z);
+        //transform.position = new Vector3(Mathf.Clamp(transform.position.x, xMin, xMax),
+                                        //Mathf.Clamp(transform.position.y, yMin, yMax),
+                                       // transform.position.z);
     }
 }
