@@ -31,34 +31,32 @@ public class Doctor : MonoBehaviour
         yDist = Math.Abs(transform.position.y - target.position.y);
         xDist = Math.Abs(transform.position.x - target.position.x);
         //If so close the gap
+        direction = Vector2.zero;
         if (xDist < 1.5 && yDist < 1.5)
         {
-            speed = (float)0.6;
+            //speed = (float)0.6;
             if (transform.position.y < target.position.y)
             {
-                direction = Vector2.up;
+                direction += Vector2.up;
                 Approach();
             }
             if (transform.position.y > target.position.y)
             {
-                direction = Vector2.down;
+                direction += Vector2.down;
                 Approach();
             }
             if (transform.position.x < target.position.x)
             {
-                direction = Vector2.right;
+                direction += Vector2.right;
                 Approach();
             }
             if (transform.position.x > target.position.x)
             {
-                direction = Vector2.left;
+                direction += Vector2.left;
                 Approach();
             }
         }
-        else
-        {
-            speed = 0;
-        }
+        
     }
 
     void Approach()
