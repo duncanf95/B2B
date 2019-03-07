@@ -34,22 +34,22 @@ public class Doctor : MonoBehaviour
         direction = Vector2.zero;
         if (xDist < 1.5 && yDist < 1.5)
         {
-            if (transform.position.y < target.position.y)
+            if (transform.position.y < target.position.y - 0.2)
             {
                 direction += Vector2.up;
                 Approach();
             }
-            if (transform.position.y > target.position.y)
+            if (transform.position.y > target.position.y + 0.2)
             {
                 direction += Vector2.down;
                 Approach();
             }
-            if (transform.position.x < target.position.x)
+            if (transform.position.x < target.position.x - 0.2)
             {
                 direction += Vector2.right;
                 Approach();
             }
-            if (transform.position.x > target.position.x)
+            if (transform.position.x > target.position.x + 0.2)
             {
                 direction += Vector2.left;
                 Approach();

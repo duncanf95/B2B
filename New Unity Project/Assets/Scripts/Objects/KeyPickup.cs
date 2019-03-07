@@ -19,7 +19,7 @@ public class KeyPickup : MonoBehaviour
     void PickUp()
     {
         gameObject.SetActive(false);
-        gameObject.GetComponent<Inventory>().test = 12;
+        //gameObject.GetComponent<Inventory>().test = 12;
         Debug.Log("dissapear");
     }
 }
