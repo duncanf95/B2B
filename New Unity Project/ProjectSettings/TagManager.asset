@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - Key
+  - Health
   layers:
   - Default
   - TransparentFX
@@ -52,6 +53,12 @@ TagManager:
   - name: Objects
     uniqueID: 1814594785
     locked: 0
+  - name: EnemyBehind
+    uniqueID: 1288992011
+    locked: 0
   - name: Player
     uniqueID: 1466918061
+    locked: 0
+  - name: EnemyFront
+    uniqueID: 3800953211
     locked: 0
