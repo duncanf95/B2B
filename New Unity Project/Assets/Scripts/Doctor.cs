@@ -34,7 +34,6 @@ public class Doctor : MonoBehaviour
         direction = Vector2.zero;
         if (xDist < 1.5 && yDist < 1.5)
         {
-            //speed = (float)0.6;
             if (transform.position.y < target.position.y)
             {
                 direction += Vector2.up;
