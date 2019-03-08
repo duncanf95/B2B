@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class KeyInventoryInfo : MonoBehaviour
 {
+    public string identifier;
+    public string door;
     // Start is called before the first frame update
-
-    public List<string> tags;
-    public List<KeyInventoryInfo> keys;
-    public int test;
     void Start()
     {
         
@@ -18,11 +16,5 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void addKey(KeyInventoryInfo key)
-    {
-        Debug.Log(key.identifier);
-        keys.Add(key);
     }
 }

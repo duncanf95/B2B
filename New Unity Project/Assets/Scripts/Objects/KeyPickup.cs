@@ -7,19 +7,19 @@ public class KeyPickup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void PickUp()
     {
         gameObject.SetActive(false);
-        //gameObject.GetComponent<Inventory>().test = 12;
+
         Debug.Log("dissapear");
     }
 }

@@ -9,6 +9,7 @@ public class InteractionObject : MonoBehaviour {
 
     [SerializeField]
     private float closeTime;
+    public string identifier;
 
     // Use this for initialization
     void Start () {
@@ -27,7 +28,6 @@ public class InteractionObject : MonoBehaviour {
 
     void Open()
     {
-        Debug.Log("Interacted open woo");
 
         GetComponent<Rigidbody2D>().simulated = false;
 
@@ -37,7 +37,7 @@ public class InteractionObject : MonoBehaviour {
     }
     void Close()
     {
-        Debug.Log("Interacted close woo");
+  
 
         GetComponent<Rigidbody2D>().simulated = true;
     }
