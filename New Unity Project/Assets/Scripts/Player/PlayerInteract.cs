@@ -11,13 +11,16 @@ public class PlayerInteract : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && co && tag == "Door")
+        if (Input.GetButtonDown("Interact")){
+            Debug.Log("button");
+        }
+        if (Input.GetButtonDown("Interact") && co && tag == "Door")
         {
             co.SendMessage("Open");
             gameObject.GetComponent<Inventory>().test = 12;
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && co && tag == "Metal Door")
+        if (Input.GetButtonDown("Interact") && co && tag == "Metal Door")
         {
             Debug.Log("at metal door");
 
@@ -32,7 +35,23 @@ public class PlayerInteract : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && co && tag == "Key")
+        if (Input.GetButtonDown("Interact") && co && tag == "Lift")
+        {
+            Debug.Log("at metal door");
+
+            foreach (KeyInventoryInfo key in gameObject.GetComponent<Inventory>().keys)
+            {
+                if (checkKey(co.GetComponent<LiftInteraction>().identifier, key.door))
+                {
+                    co.SendMessage("Open");
+                    co.GetComponent<LiftInteraction>().open = true;
+                }
+
+
+            }
+        }
+
+        if (Input.GetButtonDown("Interact") && co && tag == "Key")
         {
             gameObject.GetComponent<Inventory>().addKey(
                 co.GetComponent<KeyInventoryInfo>());
@@ -60,6 +79,12 @@ public class PlayerInteract : MonoBehaviour {
 			co = collision.gameObject;
 			tag = "Key";
 		}
+
+        if (collision.CompareTag("Lift"))
+        {
+            co = collision.gameObject;
+            tag = "Lift";
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

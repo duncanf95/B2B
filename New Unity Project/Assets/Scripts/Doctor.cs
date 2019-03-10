@@ -9,6 +9,9 @@ public class Doctor : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    [SerializeField]
+    private float knock;
+
     private Vector2 direction;
     private Vector2 knockback;
     private Transform target;
@@ -17,6 +20,8 @@ public class Doctor : MonoBehaviour
     private float newSpeed;
     private SpriteRenderer sprite;
     public Slider HealthBar;
+
+    public Boolean hit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +34,16 @@ public class Doctor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HuntTarget();
-        AttackTarget();
+        if (!hit)
+        {
+            HuntTarget();
+        }
+        else
+        {
+            speed = 0;
+            
+        }
+        //AttackTarget();
     }
 
     void HuntTarget()
@@ -144,4 +157,6 @@ public class Doctor : MonoBehaviour
     {
         transform.Translate(direction * newSpeed * Time.deltaTime);
     }
+
+   
 }

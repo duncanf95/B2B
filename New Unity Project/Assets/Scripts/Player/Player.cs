@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float yMin;
 
+    public bool hit = false;
+
 
     private Vector2 direction;
 
@@ -49,26 +51,32 @@ public class Player : MonoBehaviour
 
     private void GetInput()
     {
-        direction = Vector2.zero;
-        if (Input.GetKey(KeyCode.W))
+        if (!hit)
         {
-            direction += Vector2.up;
+            direction = Vector2.zero;
+            direction = new Vector2(Input.GetAxis("MoveHorizontal"), Input.GetAxis("MoveVertical"));
+            if (Input.GetKey(KeyCode.W))
+            {
+                direction += Vector2.up;
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                direction += Vector2.down;
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                direction += Vector2.right;
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                direction += Vector2.left;
+            }
         }
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            direction += Vector2.down;
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            direction += Vector2.right;
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            direction += Vector2.left;
-        }
+        
     }
 
     private void CheckBoundaries()
