@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
         {
             direction = Vector2.zero;
             direction = new Vector2(Input.GetAxis("MoveHorizontal"), Input.GetAxis("MoveVertical"));
+           
             if (Input.GetKey(KeyCode.W))
             {
                 direction += Vector2.up;
