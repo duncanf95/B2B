@@ -58,6 +58,13 @@ public class PlayerInteract : MonoBehaviour {
             co.SendMessage("PickUp");
 
         }
+        if (Input.GetButtonDown("Interact") && co && tag == "AxeItem")
+        {
+            gameObject.GetComponent<Inventory>().addAxe(
+                co.GetComponent<AxeInventoryInfo>());
+            co.SendMessage("PickUp");
+
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -85,6 +92,18 @@ public class PlayerInteract : MonoBehaviour {
             co = collision.gameObject;
             tag = "Lift";
         }
+
+        if (collision.CompareTag("Axe"))
+        {
+            co = collision.gameObject;
+            tag = "Axe";
+        }
+
+        if (collision.CompareTag("AxeItem"))
+        {
+            co = collision.gameObject;
+            tag = "AxeItem";
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -99,6 +118,9 @@ public class PlayerInteract : MonoBehaviour {
                 
             }
         }
+
+        co = null;
+        tag = null;
     }
 
     private bool checkKey(string tag1, string tag2)

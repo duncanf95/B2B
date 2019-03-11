@@ -49,17 +49,29 @@ public class KnockBack : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {
-               
-                    
-                    Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
-                    if (enemy != null)
-                    {
+
+
+                Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
+                if (enemy != null)
+                {
                     //enemyknockback(enemy);
                     gameObject.GetComponent<Swing>().triggered = true;
                     gameObject.GetComponent<Swing>().enemy = enemy;
-                    }
+                }
+
+            }
+
+            if (collision.gameObject.CompareTag("Wooden Door"))
+            {
+        
+                gameObject.GetComponent<Swing>().triggered = true;
+                gameObject.GetComponent<Swing>().door = collision.gameObject;
                 
             }
+
+
+
+
         }
     }
 
@@ -91,6 +103,12 @@ public class KnockBack : MonoBehaviour
         enemy.AddForce(difference, ForceMode2D.Impulse);
         StartCoroutine(KnockCo(enemy));
     }
+
+    public void destoryDoor(GameObject door)
+    {
+        door.SetActive(false);
+    }
+    
 
     private IEnumerator KnockCo(Rigidbody2D enemy)
     {

@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
 
     public List<string> tags;
     public List<KeyInventoryInfo> keys;
+    public AxeInventoryInfo axe = null;
     public int test;
     void Start()
     {
@@ -24,5 +25,10 @@ public class Inventory : MonoBehaviour
     {
         Debug.Log(key.identifier);
         keys.Add(key);
+    }
+
+    public void addAxe(AxeInventoryInfo a)
+    {
+        axe = a;
     }
 }

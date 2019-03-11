@@ -12,6 +12,8 @@ TagManager:
   - Enemy
   - Axe
   - Lift
+  - Wooden Door
+  - AxeItem
   layers:
   - Default
   - TransparentFX

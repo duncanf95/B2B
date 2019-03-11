@@ -21,34 +21,36 @@ public class TrackPositionAxe : MonoBehaviour
     private void UpdateDirection()
     {
         //direction = Vector2.zero;
+
+        var t = gameObject.transform.localEulerAngles;
         checkInputs();
 
         if (direction.x > 0 && direction.y > 0)
         {
             if (Math.Truncate(gameObject.transform.rotation.eulerAngles.z) != 315)
             {
-                gameObject.transform.Rotate(0, 0, 45);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 315);
             }
         }
         else if (direction.x > 0 && direction.y < 0)
         {
             if (Math.Truncate(gameObject.transform.rotation.eulerAngles.z) != 225)
-            {
-                gameObject.transform.Rotate(0, 0, 45);
+            {  
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 225);
             }
         }
         else if (direction.x < 0 && direction.y < 0)
         {
             if (Math.Truncate(gameObject.transform.rotation.eulerAngles.z) != 135)
             {
-                gameObject.transform.Rotate(0, 0, 45);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 135);
             }
         }
         else if (direction.x < 0 && direction.y > 0)
         {
             if (Math.Truncate(gameObject.transform.rotation.eulerAngles.z) != 45)
             {
-                gameObject.transform.Rotate(0, 0, 45);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 45);
             }
         }
 
@@ -56,28 +58,28 @@ public class TrackPositionAxe : MonoBehaviour
         {
             if (Math.Truncate(gameObject.transform.rotation.eulerAngles.z) != 270)
             {
-                gameObject.transform.Rotate(0, 0, 45);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 270);
             }
         }
         else if (direction.x == 0 && direction.y < 0)
         {
             if (Math.Truncate(gameObject.transform.rotation.eulerAngles.z) != 180)
             {
-                gameObject.transform.Rotate(0, 0, 45);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
             }
         }
         else if (direction.x < 0 && direction.y == 0)
         {
             if (Math.Truncate(gameObject.transform.rotation.eulerAngles.z) != 90)
             {
-                gameObject.transform.Rotate(0, 0, 45);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
             }
         }
         else if (direction.x == 0 && direction.y > 0)
         {
             if (Math.Truncate(gameObject.transform.rotation.eulerAngles.z) != 0)
             {
-                gameObject.transform.Rotate(0, 0, 45);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
     }
