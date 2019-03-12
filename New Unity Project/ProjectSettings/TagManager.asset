@@ -14,6 +14,7 @@ TagManager:
   - Lift
   - Wooden Door
   - AxeItem
+  - Torch
   layers:
   - Default
   - TransparentFX
@@ -68,4 +69,7 @@ TagManager:
     locked: 0
   - name: EnemyFront
     uniqueID: 3800953211
+    locked: 0
+  - name: Roof
+    uniqueID: 3920056699
     locked: 0
