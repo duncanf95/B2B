@@ -65,6 +65,13 @@ public class PlayerInteract : MonoBehaviour {
             co.SendMessage("PickUp");
 
         }
+        if (Input.GetButtonDown("Interact") && co && tag == "Torch")
+        {
+            gameObject.GetComponent<Inventory>().addTorch(
+                co.GetComponent<TorchInventoryInfo>());
+            co.SendMessage("PickUp");
+
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -103,6 +110,12 @@ public class PlayerInteract : MonoBehaviour {
         {
             co = collision.gameObject;
             tag = "AxeItem";
+        }
+
+        if (collision.CompareTag("Torch"))
+        {
+            co = collision.gameObject;
+            tag = "Torch";
         }
     }
 

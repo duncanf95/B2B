@@ -9,6 +9,8 @@ public class Inventory : MonoBehaviour
     public List<string> tags;
     public List<KeyInventoryInfo> keys;
     public AxeInventoryInfo axe = null;
+    public TorchInventoryInfo torch = null;
+
     public int test;
     void Start()
     {
@@ -30,5 +32,10 @@ public class Inventory : MonoBehaviour
     public void addAxe(AxeInventoryInfo a)
     {
         axe = a;
+    }
+
+    public void addTorch(TorchInventoryInfo t)
+    {
+        torch = t;
     }
 }
