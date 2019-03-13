@@ -43,7 +43,6 @@ public class Doctor : MonoBehaviour
             speed = 0;
             
         }
-        //AttackTarget();
     }
 
     void HuntTarget()
@@ -117,46 +116,8 @@ public class Doctor : MonoBehaviour
         }
     }
 
-    void AttackTarget()
-    {
-        //Is the player within range of attack?
-        yDist = Math.Abs(transform.position.y - target.position.y);
-        xDist = Math.Abs(transform.position.x - target.position.x);
-        //If so hit him
-        if (xDist < 0.3 && yDist < 0.4)
-        {
-            HealthBar.value -= 25;
-            if (transform.position.y < target.position.y)
-            {
-                knockback = target.position;
-                knockback.y += (float)0.3;
-                target.position = knockback;
-            }
-            if (transform.position.y > target.position.y)
-            {
-                knockback = target.position;
-                knockback.y -= (float)0.3;
-                target.position = knockback;
-            }
-            if (transform.position.x < target.position.x)
-            {
-                knockback = target.position;
-                knockback.x += (float)0.3;
-                target.position = knockback;
-            }
-            if (transform.position.x > target.position.x)
-            {
-                knockback = target.position;
-                knockback.x -= (float)0.3;
-                target.position = knockback;
-            }
-        }
-    }
-
     void Approach()
     {
         transform.Translate(direction * newSpeed * Time.deltaTime);
     }
-
-   
 }

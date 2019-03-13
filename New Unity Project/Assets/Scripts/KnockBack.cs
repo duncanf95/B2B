@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KnockBack : MonoBehaviour
 {
@@ -12,13 +13,13 @@ public class KnockBack : MonoBehaviour
     private float knockback;
     [SerializeField]
     private float knocktime;
-
+    public Slider HealthBar;
 
 
 
     void Start()
     {
-
+        HealthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -39,6 +40,7 @@ public class KnockBack : MonoBehaviour
                 Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
                 if (enemy != null)
                 {
+                    HealthBar.value -= 5;
                     playerknockback(enemy);
                 }
             }
