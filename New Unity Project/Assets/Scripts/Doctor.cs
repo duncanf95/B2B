@@ -9,17 +9,12 @@ public class Doctor : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    [SerializeField]
-    private float knock;
-
     private Vector2 direction;
-    private Vector2 knockback;
     private Transform target;
     private double yDist;
     private double xDist;
     private float newSpeed;
     private SpriteRenderer sprite;
-    public Slider HealthBar;
 
     public Boolean hit = false;
 
@@ -28,7 +23,6 @@ public class Doctor : MonoBehaviour
     {
         target = GameObject.Find("Player").transform;
         sprite = GetComponent<SpriteRenderer>();
-        HealthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
     }
 
     // Update is called once per frame

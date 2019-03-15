@@ -6,17 +6,14 @@ using UnityEngine.UI;
 
 public class KnockBack : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    private float thrust = 0;
     [SerializeField]
     private float knockback;
     [SerializeField]
     private float knocktime;
+
     public Slider HealthBar;
 
-
-
+    // Start is called before the first frame update
     void Start()
     {
         HealthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
