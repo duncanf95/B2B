@@ -50,7 +50,10 @@ public class Player : MonoBehaviour
         GetInput();
         CheckBoundaries();
         Move();
-        HealthBar.value = health;
+        if (HealthBar)
+        {
+            HealthBar.value = health;
+        }
 
     }
 
