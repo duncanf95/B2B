@@ -37,7 +37,8 @@ public class KnockBack : MonoBehaviour
                 Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
                 if (enemy != null)
                 {
-                    HealthBar.value -= 5;
+                    Player p = collision.GetComponent<Player>();
+                    p.DecreaseHealth(25);
                     playerknockback(enemy);
                 }
             }

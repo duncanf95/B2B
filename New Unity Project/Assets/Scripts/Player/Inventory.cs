@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public List<KeyInventoryInfo> keys;
     public AxeInventoryInfo axe = null;
     public TorchInventoryInfo torch = null;
+    public LighterInventoryInfo lighter = null;
 
     public int test;
     void Start()
@@ -37,5 +38,10 @@ public class Inventory : MonoBehaviour
     public void addTorch(TorchInventoryInfo t)
     {
         torch = t;
+    }
+
+    public void addLighter(LighterInventoryInfo l)
+    {
+        lighter = l;
     }
 }

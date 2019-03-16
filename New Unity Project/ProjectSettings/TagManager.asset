@@ -15,6 +15,9 @@ TagManager:
   - Wooden Door
   - AxeItem
   - Torch
+  - Lighter
+  - Fire
+  - HP
   layers:
   - Default
   - TransparentFX

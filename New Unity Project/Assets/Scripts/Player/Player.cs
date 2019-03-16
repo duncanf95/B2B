@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -17,10 +18,15 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float yMin;
 
+    [SerializeField]
+    float health = 100;
+
     public bool hit = false;
 
 
     private Vector2 direction;
+    private Slider HealthBar;
+
 
 
 
@@ -33,6 +39,9 @@ public class Player : MonoBehaviour
 
         yMin += GetComponent<SpriteRenderer>().bounds.size.y / 2;
         yMax -= GetComponent<SpriteRenderer>().bounds.size.y / 2;
+
+        HealthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
+
     }
 
     // Update is called once per frame
@@ -41,7 +50,8 @@ public class Player : MonoBehaviour
         GetInput();
         CheckBoundaries();
         Move();
-        
+        HealthBar.value = health;
+
     }
 
     public void Move()
@@ -86,5 +96,23 @@ public class Player : MonoBehaviour
         //transform.position = new Vector3(Mathf.Clamp(transform.position.x, xMin, xMax),
                                         //Mathf.Clamp(transform.position.y, yMin, yMax),
                                        // transform.position.z);
+    }
+
+    public void DecreaseHealth(float d)
+    {
+        health -= d;
+        if(health < 0)
+        {
+            health = 0;
+        }
+    }
+
+    public void increaseHealth(float d)
+    {
+        health += d;
+        if (health > 100)
+        {
+            health = 100;
+        }
     }
 }

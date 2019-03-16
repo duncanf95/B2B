@@ -8,6 +8,8 @@ public class Doctor : MonoBehaviour
 {
     [SerializeField]
     private float speed;
+    [SerializeField]
+    float sleepTime = 1.0f;
 
     private Vector2 direction;
     private Transform target;
@@ -34,7 +36,7 @@ public class Doctor : MonoBehaviour
         }
         else
         {
-            speed = 0;
+            //speed = 0;
             
         }
     }
@@ -113,5 +115,18 @@ public class Doctor : MonoBehaviour
     void Approach()
     {
         transform.Translate(direction * newSpeed * Time.deltaTime);
+    }
+
+    void sleep()
+    {
+        hit = true;
+        StartCoroutine(StayDown());
+    }
+
+    private IEnumerator StayDown()
+    {
+
+        yield return new WaitForSeconds(sleepTime);
+        hit = false;
     }
 }

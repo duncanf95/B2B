@@ -11,7 +11,8 @@ public class PlayerInteract : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetButtonDown("Interact")){
+        if (Input.GetButtonDown("Interact"))
+        {
             Debug.Log("button");
         }
         if (Input.GetButtonDown("Interact") && co && tag == "Door")
@@ -72,6 +73,32 @@ public class PlayerInteract : MonoBehaviour {
             co.SendMessage("PickUp");
 
         }
+
+        if (Input.GetButtonDown("Interact") && co && tag == "Lighter")
+        {
+            gameObject.GetComponent<Inventory>().addLighter(
+                co.GetComponent<LighterInventoryInfo>());
+            co.SendMessage("PickUp");
+
+        }
+
+        if (Input.GetButtonDown("Interact") && co && tag == "Fire")
+        {
+            if (gameObject.GetComponent<Inventory>().lighter)
+            {
+                if (gameObject.GetComponent<Inventory>().lighter.selected)
+                {
+                    co.SendMessage("LightFire");
+                }
+
+            }
+        }
+        if (Input.GetButtonDown("Interact") && co && tag == "HP")
+        {
+            co.SendMessage("PickUp");
+            Player p = gameObject.GetComponent<Player>();
+            p.increaseHealth(50);
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -116,6 +143,24 @@ public class PlayerInteract : MonoBehaviour {
         {
             co = collision.gameObject;
             tag = "Torch";
+        }
+
+        if (collision.CompareTag("Lighter"))
+        {
+            co = collision.gameObject;
+            tag = "Lighter";
+        }
+
+        if (collision.CompareTag("Fire"))
+        {
+            co = collision.gameObject;
+            tag = "Fire";
+        }
+
+        if (collision.CompareTag("HP"))
+        {
+            co = collision.gameObject;
+            tag = "HP";
         }
     }
 
