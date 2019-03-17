@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     public AxeInventoryInfo axe = null;
     public TorchInventoryInfo torch = null;
     public LighterInventoryInfo lighter = null;
+    public SyringeInventoryInfo syringe = null;
     public int fuses = 0;
 
     public int test;
@@ -44,5 +45,10 @@ public class Inventory : MonoBehaviour
     public void addLighter(LighterInventoryInfo l)
     {
         lighter = l;
+    }
+
+    public void addSyringe(SyringeInventoryInfo s)
+    {
+        syringe = s;
     }
 }

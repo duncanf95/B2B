@@ -21,6 +21,7 @@ TagManager:
   - Egg
   - Fuse
   - FuseBox
+  - Syringe
   layers:
   - Default
   - TransparentFX

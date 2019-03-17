@@ -112,6 +112,14 @@ public class PlayerInteract : MonoBehaviour {
             co.SendMessage("PickUp");
             co.GetComponent<FuseBox>().setFuses(fuses);
         }
+
+        if (Input.GetButtonDown("Interact") && co && tag == "Syringe")
+        {
+           
+            co.SendMessage("PickUp");
+            gameObject.GetComponent<Inventory>().addSyringe(
+                co.GetComponent<SyringeInventoryInfo>());
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -186,6 +194,12 @@ public class PlayerInteract : MonoBehaviour {
         {
             co = collision.gameObject;
             tag = "FuseBox";
+        }
+
+        if (collision.CompareTag("Syringe"))
+        {
+            co = collision.gameObject;
+            tag = "Syringe";
         }
     }
 

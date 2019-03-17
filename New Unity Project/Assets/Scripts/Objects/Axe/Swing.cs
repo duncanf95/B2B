@@ -10,6 +10,8 @@ public class Swing : MonoBehaviour
     public bool triggered;
     AxeInventoryInfo axe;
     public GameObject door;
+    [SerializeField]
+    private float axeOutTime = 0.5f;
     
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,8 @@ public class Swing : MonoBehaviour
                         if (axe.selected)
                         {
                             gameObject.GetComponent<KnockBack>().enemyknockback(enemy);
+                            gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Objects";
+                            StartCoroutine(outTimer());
                             Debug.Log("Swing");
                             animAxe.Play("AxeSwing");
                         }
@@ -58,12 +62,30 @@ public class Swing : MonoBehaviour
         }
         if (axe != null)
         {
-            if (egg != null)
-            {               
-                Debug.Log("Swing");
-                animAxe.Play("AxeSwing");                
+            if (axe.selected)
+            {
+                if (egg != null)
+                {
+                    Debug.Log("Swing");
+                    animAxe.Play("AxeSwing");
+                }
             }
         }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            if (axe.selected)
+            {
+                gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Objects";
+                StartCoroutine(outTimer());
+            }
+        }
+    }
+
+    private IEnumerator outTimer()
+    {
+        yield return new WaitForSeconds(axeOutTime);
+        gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
     }
 
 
