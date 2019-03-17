@@ -99,6 +99,19 @@ public class PlayerInteract : MonoBehaviour {
             Player p = gameObject.GetComponent<Player>();
             p.increaseHealth(50);
         }
+
+        if (Input.GetButtonDown("Interact") && co && tag == "Fuse")
+        {
+            co.SendMessage("PickUp");
+            gameObject.GetComponent<Inventory>().fuses++;
+        }
+
+        if (Input.GetButtonDown("Interact") && co && tag == "FuseBox")
+        {
+            int fuses = gameObject.GetComponent<Inventory>().fuses;
+            co.SendMessage("PickUp");
+            co.GetComponent<FuseBox>().setFuses(fuses);
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -161,6 +174,18 @@ public class PlayerInteract : MonoBehaviour {
         {
             co = collision.gameObject;
             tag = "HP";
+        }
+
+        if (collision.CompareTag("Fuse"))
+        {
+            co = collision.gameObject;
+            tag = "Fuse";
+        }
+
+        if (collision.CompareTag("FuseBox"))
+        {
+            co = collision.gameObject;
+            tag = "FuseBox";
         }
     }
 
