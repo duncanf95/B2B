@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     public AxeInventoryInfo axe = null;
     public TorchInventoryInfo torch = null;
     public LighterInventoryInfo lighter = null;
+    public int fuses
 
     public int test;
     void Start()

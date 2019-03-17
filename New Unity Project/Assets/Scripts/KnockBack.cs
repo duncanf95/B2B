@@ -63,16 +63,17 @@ public class KnockBack : MonoBehaviour
 
             if (collision.gameObject.CompareTag("Wooden Door"))
             {
-        
+
                 gameObject.GetComponent<Swing>().triggered = true;
                 gameObject.GetComponent<Swing>().door = collision.gameObject;
-                
+
             }
 
-            
 
 
 
+
+            }
 
         }
     }
@@ -110,7 +111,7 @@ public class KnockBack : MonoBehaviour
     {
         door.SetActive(false);
     }
-    
+
 
     private IEnumerator KnockCo(Rigidbody2D enemy)
     {

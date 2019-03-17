@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Swing : MonoBehaviour
 {
-
+    public Animator animAxe;
     public Rigidbody2D enemy;
+    public GameObject egg;
     public bool triggered;
     AxeInventoryInfo axe;
     public GameObject door;
@@ -13,6 +14,7 @@ public class Swing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animAxe = GetComponent<Animator>();
         axe = GameObject.Find("Player").GetComponent<Inventory>().axe;
     }
 
@@ -32,6 +34,7 @@ public class Swing : MonoBehaviour
                         {
                             gameObject.GetComponent<KnockBack>().enemyknockback(enemy);
                             Debug.Log("Swing");
+                            animAxe.Play("AxeSwing");
                         }
                     }
                 }
@@ -46,9 +49,19 @@ public class Swing : MonoBehaviour
                       
                             gameObject.GetComponent<KnockBack>().destoryDoor(door);
                             Debug.Log("Swing");
+                            animAxe.Play("AxeSwing");
                         }
                     }
                 }
+                
+            }
+        }
+        if (axe != null)
+        {
+            if (egg != null)
+            {               
+                Debug.Log("Swing");
+                animAxe.Play("AxeSwing");                
             }
         }
     }
