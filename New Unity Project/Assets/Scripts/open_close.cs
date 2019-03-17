@@ -24,4 +24,9 @@ public class open_close : MonoBehaviour
         animator.SetBool("Open", true);
         B2D.isTrigger = true;
     }
+
+    public void Stop()
+    {
+
+    }
 }

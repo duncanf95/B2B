@@ -22,7 +22,7 @@ public class Swing : MonoBehaviour
         axe = GameObject.Find("Player").GetComponent<Inventory>().axe;
         if (triggered)
         {
-            if (Input.GetButton("Fire2"))
+            if (Input.GetButtonDown("Fire2"))
             {
                 if (enemy != null)
                 {

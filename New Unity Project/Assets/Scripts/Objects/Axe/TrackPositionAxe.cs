@@ -7,9 +7,10 @@ public class TrackPositionAxe : MonoBehaviour
 {
     // Start is called before the first frame update
     private Vector2 direction;
+    private Transform target;
     void Start()
     {
-        
+        target = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ public class TrackPositionAxe : MonoBehaviour
             if (Math.Truncate(gameObject.transform.rotation.eulerAngles.z) != 315)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 315);
+                
             }
         }
         else if (direction.x > 0 && direction.y < 0)
