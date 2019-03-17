@@ -117,7 +117,7 @@ public class Doctor : MonoBehaviour
         transform.Translate(direction * newSpeed * Time.deltaTime);
     }
 
-    void sleep()
+    public void sleep()
     {
         hit = true;
         StartCoroutine(StayDown());

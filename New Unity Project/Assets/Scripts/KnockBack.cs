@@ -35,8 +35,10 @@ public class KnockBack : MonoBehaviour
             {
 
                 Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
+               
                 if (enemy != null)
                 {
+                    gameObject.GetComponent<Doctor>().sleep();
                     Player p = collision.GetComponent<Player>();
                     p.DecreaseHealth(25);
                     playerknockback(enemy);
@@ -55,6 +57,7 @@ public class KnockBack : MonoBehaviour
                 if (enemy != null)
                 {
                     //enemyknockback(enemy);
+                    collision.GetComponent<Doctor>().sleep();
                     gameObject.GetComponent<Swing>().triggered = true;
                     gameObject.GetComponent<Swing>().enemy = enemy;
                 }
