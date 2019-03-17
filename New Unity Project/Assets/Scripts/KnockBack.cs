@@ -63,14 +63,11 @@ public class KnockBack : MonoBehaviour
 
             if (collision.gameObject.CompareTag("Wooden Door"))
             {
-        
+
                 gameObject.GetComponent<Swing>().triggered = true;
                 gameObject.GetComponent<Swing>().door = collision.gameObject;
-                
+
             }
-
-
-
 
         }
     }

@@ -18,6 +18,7 @@ TagManager:
   - Lighter
   - Fire
   - HP
+  - Egg
   layers:
   - Default
   - TransparentFX
