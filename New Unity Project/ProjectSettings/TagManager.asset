@@ -19,6 +19,8 @@ TagManager:
   - Fire
   - HP
   - Egg
+  - Fuse
+  - FuseBox
   layers:
   - Default
   - TransparentFX
