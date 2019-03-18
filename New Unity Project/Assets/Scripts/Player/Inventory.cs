@@ -38,27 +38,7 @@ public class Inventory : MonoBehaviour
     public int test;
     void Start()
     {
-        AxeIcon = GameObject.Find("AxeIcon").GetComponent<GameObject>();
-        BlueKeyIcon = GameObject.Find("BlueKeyIcon").GetComponent<GameObject>();
-        RedKeyIcon = GameObject.Find("RedKeyIcon").GetComponent<GameObject>();
-        YellowKeyIcon = GameObject.Find("YellowKeyIcon").GetComponent<GameObject>();
-        GreenKeyIcon = GameObject.Find("GreenKeyIcon").GetComponent<GameObject>();
-        LighterIcon = GameObject.Find("LighterIcon").GetComponent<GameObject>();
-        TorchIcon = GameObject.Find("TorchIcon").GetComponent<GameObject>();
-        Lift1Icon = GameObject.Find("Lift1Icon").GetComponent<GameObject>();
-        Lift2Icon = GameObject.Find("Lift2Icon").GetComponent<GameObject>();
-        Lift3Icon = GameObject.Find("Lift3Icon").GetComponent<GameObject>();
-        Fuse1Icon = GameObject.Find("Fuse1Icon").GetComponent<GameObject>();
-        Fuse2Icon = GameObject.Find("Fuse2Icon").GetComponent<GameObject>();
-        Fuse3Icon = GameObject.Find("Fuse3Icon").GetComponent<GameObject>();
-        SyringeIcon = GameObject.Find("SyringeIcon").GetComponent<GameObject>();
-        Code1Icon = GameObject.Find("Code1Icon").GetComponent<GameObject>();
-        Code2Icon = GameObject.Find("Code2Icon").GetComponent<GameObject>();
-        Code3Icon = GameObject.Find("Code3Icon").GetComponent<GameObject>();
-        Collectible1Icon = GameObject.Find("Collectible1Icon").GetComponent<GameObject>();
-        Collectible2Icon = GameObject.Find("Collectible2Icon").GetComponent<GameObject>();
-        Collectible3Icon = GameObject.Find("Collectible3Icon").GetComponent<GameObject>();
-        Collectible4Icon = GameObject.Find("Collectible4Icon").GetComponent<GameObject>();
+        
     }
 
     // Update is called once per frame
@@ -82,15 +62,19 @@ public class Inventory : MonoBehaviour
     public void addTorch(TorchInventoryInfo t)
     {
         torch = t;
+        TorchIcon.SetActive(true);
     }
 
     public void addLighter(LighterInventoryInfo l)
     {
         lighter = l;
+        LighterIcon.SetActive(true);
     }
 
     public void addSyringe(SyringeInventoryInfo s)
     {
         syringe = s;
+        SyringeIcon.SetActive(true);
     }
+    
 }

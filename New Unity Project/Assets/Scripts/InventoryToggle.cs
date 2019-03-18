@@ -10,7 +10,7 @@ public class InventoryToggle : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetButtonDown("Jump"))
         {
             if (InventoryisOpen == false)
             {

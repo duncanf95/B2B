@@ -3,7 +3,32 @@ guid: 3f25afeb44501a74c9e1f03c64201c63
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - axe: {instanceID: 0}
+  - torch: {instanceID: 0}
+  - lighter: {instanceID: 0}
+  - syringe: {instanceID: 0}
+  - AxeIcon: {instanceID: 0}
+  - BlueKeyIcon: {instanceID: 0}
+  - RedKeyIcon: {instanceID: 0}
+  - YellowKeyIcon: {instanceID: 0}
+  - GreenKeyIcon: {instanceID: 0}
+  - LighterIcon: {instanceID: 0}
+  - TorchIcon: {instanceID: 0}
+  - Lift1Icon: {instanceID: 0}
+  - Lift2Icon: {instanceID: 0}
+  - Lift3Icon: {instanceID: 0}
+  - Fuse1Icon: {instanceID: 0}
+  - Fuse2Icon: {instanceID: 0}
+  - Fuse3Icon: {instanceID: 0}
+  - SyringeIcon: {instanceID: 0}
+  - Code1Icon: {instanceID: 0}
+  - Code2Icon: {instanceID: 0}
+  - Code3Icon: {instanceID: 0}
+  - Collectible1Icon: {instanceID: 0}
+  - Collectible2Icon: {instanceID: 0}
+  - Collectible3Icon: {instanceID: 0}
+  - Collectible4Icon: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
