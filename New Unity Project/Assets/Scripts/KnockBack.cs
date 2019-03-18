@@ -10,6 +10,9 @@ public class KnockBack : MonoBehaviour
     private float knockback;
     [SerializeField]
     private float knocktime;
+    [SerializeField]
+    public AudioClip hitSound;
+    private AudioSource DamageTaken;
 
     public Slider HealthBar;
 
@@ -17,6 +20,7 @@ public class KnockBack : MonoBehaviour
     void Start()
     {
         HealthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
+        DamageTaken = this.gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,6 +42,14 @@ public class KnockBack : MonoBehaviour
                
                 if (enemy != null)
                 {
+                    if (DamageTaken != null)
+                    {
+                        DamageTaken.PlayOneShot(hitSound, 1.0F);
+                    }
+                    else
+                    {
+                        Debug.Log("Attempted to play missing audio clip by name" + DamageTaken);
+                    }
                     gameObject.GetComponent<Doctor>().sleep();
                     Player p = collision.GetComponent<Player>();
                     p.DecreaseHealth(15);
