@@ -14020,6 +14020,18 @@ PrefabInstance:
       propertyPath: identifier
       value: MetalDoor2
       objectReference: {fileID: 0}
+    - target: {fileID: 9050787837591872741, guid: 30838a3ef2cfad445a05cd4a2ca53624,
+        type: 3}
+      propertyPath: OpenSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b35c8c849beb9f54f963ec62637226fe,
+        type: 3}
+    - target: {fileID: 9050787837591872741, guid: 30838a3ef2cfad445a05cd4a2ca53624,
+        type: 3}
+      propertyPath: CloseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c5275ba89ce7dd3448865450d7e35229,
+        type: 3}
     - target: {fileID: 9150665365686379857, guid: 30838a3ef2cfad445a05cd4a2ca53624,
         type: 3}
       propertyPath: m_Sprite
@@ -17404,6 +17416,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 9050787837591872741, guid: 30838a3ef2cfad445a05cd4a2ca53624,
+        type: 3}
+      propertyPath: OpenSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e70a72652bda843488803457d7b8ecaf,
+        type: 3}
+    - target: {fileID: 9050787837591872741, guid: 30838a3ef2cfad445a05cd4a2ca53624,
+        type: 3}
+      propertyPath: CloseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7789282be2d06524db127056a9a94335,
+        type: 3}
     - target: {fileID: 8989153226654722091, guid: 30838a3ef2cfad445a05cd4a2ca53624,
         type: 3}
       propertyPath: m_BodyType

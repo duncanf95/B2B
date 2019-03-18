@@ -38,13 +38,7 @@ public class Inventory : MonoBehaviour
     public int test;
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        AxeIcon = GameObject.Find("HUDCancas/InventoryObj/Inventory/ItemsParent/AxeIcon").GetComponent<GameObject>();
+        AxeIcon = GameObject.Find("AxeIcon").GetComponent<GameObject>();
         BlueKeyIcon = GameObject.Find("BlueKeyIcon").GetComponent<GameObject>();
         RedKeyIcon = GameObject.Find("RedKeyIcon").GetComponent<GameObject>();
         YellowKeyIcon = GameObject.Find("YellowKeyIcon").GetComponent<GameObject>();
@@ -65,6 +59,12 @@ public class Inventory : MonoBehaviour
         Collectible2Icon = GameObject.Find("Collectible2Icon").GetComponent<GameObject>();
         Collectible3Icon = GameObject.Find("Collectible3Icon").GetComponent<GameObject>();
         Collectible4Icon = GameObject.Find("Collectible4Icon").GetComponent<GameObject>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 
     public void addKey(KeyInventoryInfo key)
