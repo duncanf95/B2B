@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Doctor : MonoBehaviour
+
+public class NonEnemy : MonoBehaviour
 {
     [SerializeField]
     private float speed;
@@ -34,7 +35,7 @@ public class Doctor : MonoBehaviour
     {
         if (!hit)
         {
-            HuntTarget();
+            FleeTarget();
         }
         else
         {
@@ -42,7 +43,7 @@ public class Doctor : MonoBehaviour
         }
     }
 
-    void HuntTarget()
+    void FleeTarget()
     {
         //Is the player within radius of the enemy?
         yDist = Math.Abs(transform.position.y - target.position.y);
@@ -53,21 +54,6 @@ public class Doctor : MonoBehaviour
         if (xDist < 2 && yDist < 2)
         {
             if (transform.position.y < target.position.y - 0.25)
-            {
-                sprite.sortingLayerName = "EnemyFront";
-                direction += Vector2.up;
-                if (transform.position.x > target.position.x - 0.3 && transform.position.x < target.position.x + 0.3)
-                {
-                    newSpeed = speed * 2;
-                    Approach();
-                    newSpeed = speed;
-                }
-                else
-                {
-                    Approach();
-                }
-            }
-            if (transform.position.y > target.position.y + 0.4)
             {
                 sprite.sortingLayerName = "EnemyBehind";
                 direction += Vector2.down;
@@ -82,9 +68,24 @@ public class Doctor : MonoBehaviour
                     Approach();
                 }
             }
+            if (transform.position.y > target.position.y + 0.4)
+            {
+                sprite.sortingLayerName = "EnemyFront";
+                direction += Vector2.up;
+                if (transform.position.x > target.position.x - 0.3 && transform.position.x < target.position.x + 0.3)
+                {
+                    newSpeed = speed * 2;
+                    Approach();
+                    newSpeed = speed;
+                }
+                else
+                {
+                    Approach();
+                }
+            }
             if (transform.position.x < target.position.x - 0.3)
             {
-                direction += Vector2.right;
+                direction += Vector2.left;
                 if (transform.position.y > target.position.y - 0.4 && transform.position.y < target.position.y + 0.25)
                 {
                     newSpeed = speed * 2;
@@ -98,7 +99,7 @@ public class Doctor : MonoBehaviour
             }
             if (transform.position.x > target.position.x + 0.3)
             {
-                direction += Vector2.left;
+                direction += Vector2.right;
                 if (transform.position.y > target.position.y - 0.4 && transform.position.y < target.position.y + 0.25)
                 {
                     newSpeed = speed * 2;
@@ -135,7 +136,7 @@ public class Doctor : MonoBehaviour
     {
         health -= h;
 
-        if(health <= 0)
+        if (health <= 0)
         {
             gameObject.SetActive(false);
         }

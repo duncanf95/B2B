@@ -40,7 +40,7 @@ public class KnockBack : MonoBehaviour
                 {
                     gameObject.GetComponent<Doctor>().sleep();
                     Player p = collision.GetComponent<Player>();
-                    p.DecreaseHealth(25);
+                    p.DecreaseHealth(15);
                     playerknockback(enemy);
                 }
             }
