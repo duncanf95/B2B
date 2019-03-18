@@ -2017,7 +2017,7 @@ PrefabInstance:
     - target: {fileID: 6203714911607622897, guid: 1208402b34f21204d85b5e5854e6759f,
         type: 3}
       propertyPath: speed
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6203714911607622897, guid: 1208402b34f21204d85b5e5854e6759f,
         type: 3}
@@ -2382,6 +2382,18 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114431255612464412, guid: 607ee8718a8e47245a3c2db9ae2a94d4,
+        type: 3}
+      propertyPath: CloseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 51ec989409508e54eb4365de453fceed,
+        type: 3}
+    - target: {fileID: 114431255612464412, guid: 607ee8718a8e47245a3c2db9ae2a94d4,
+        type: 3}
+      propertyPath: OpenSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c9722e0d8b5918844aa5f36b5b3d8e22,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 607ee8718a8e47245a3c2db9ae2a94d4, type: 3}
 --- !u!1 &446671005
@@ -11733,7 +11745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548d91246bfdef643bd9b1718c10820f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OpenSprite: {fileID: 21300000, guid: c98547eb65e449d40a4d2aba4e6f0ac4, type: 3}
+  OpenSprite: {fileID: 21300000, guid: c9722e0d8b5918844aa5f36b5b3d8e22, type: 3}
   CloseSprite: {fileID: 21300000, guid: fa16c2c29884aff4296c1334cd710729, type: 3}
   closeTime: 0
   identifier: 
@@ -13001,7 +13013,7 @@ PrefabInstance:
     - target: {fileID: 1113643403562832893, guid: e66d6b4be7965bf488874449879da5e5,
         type: 3}
       propertyPath: speed
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1113643403562832895, guid: e66d6b4be7965bf488874449879da5e5,
         type: 3}
@@ -14017,8 +14029,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050787837591872741, guid: 30838a3ef2cfad445a05cd4a2ca53624,
         type: 3}
-      propertyPath: identifier
-      value: MetalDoor2
+      propertyPath: speed
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 9050787837591872741, guid: 30838a3ef2cfad445a05cd4a2ca53624,
         type: 3}
@@ -16914,7 +16926,7 @@ PrefabInstance:
     - target: {fileID: 1113643403562832893, guid: e66d6b4be7965bf488874449879da5e5,
         type: 3}
       propertyPath: speed
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1113643403562832895, guid: e66d6b4be7965bf488874449879da5e5,
         type: 3}
@@ -17084,6 +17096,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 2468599819402085206, guid: d974de4742b8c034e9fef48fce7b0614,
+        type: 3}
+      propertyPath: OpenSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c9722e0d8b5918844aa5f36b5b3d8e22,
+        type: 3}
+    - target: {fileID: 2468599819402085206, guid: d974de4742b8c034e9fef48fce7b0614,
+        type: 3}
+      propertyPath: CloseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 51ec989409508e54eb4365de453fceed,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d974de4742b8c034e9fef48fce7b0614, type: 3}
 --- !u!1001 &6203714911279837848
@@ -17156,7 +17180,7 @@ PrefabInstance:
     - target: {fileID: 6203714911607622897, guid: 1208402b34f21204d85b5e5854e6759f,
         type: 3}
       propertyPath: speed
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6203714911607622897, guid: 1208402b34f21204d85b5e5854e6759f,
         type: 3}
