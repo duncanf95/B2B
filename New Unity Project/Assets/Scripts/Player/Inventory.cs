@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour
     public int test;
     void Start()
     {
-        AxeIcon = GameObject.Find("AxeIcon").GetComponent<GameObject>();
+        AxeIcon = GameObject.Find("AxeIcon");
         BlueKeyIcon = GameObject.Find("BlueKeyIcon").GetComponent<GameObject>();
         RedKeyIcon = GameObject.Find("RedKeyIcon").GetComponent<GameObject>();
         YellowKeyIcon = GameObject.Find("YellowKeyIcon").GetComponent<GameObject>();
