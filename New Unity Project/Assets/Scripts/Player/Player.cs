@@ -104,9 +104,10 @@ public class Player : MonoBehaviour
     public void DecreaseHealth(float d)
     {
         health -= d;
-        if(health < 0)
+        if(health <= 0)
         {
             health = 0;
+            Application.LoadLevel("B2B");
         }
     }
 

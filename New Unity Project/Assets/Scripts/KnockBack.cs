@@ -57,7 +57,6 @@ public class KnockBack : MonoBehaviour
                 if (enemy != null)
                 {
                     //enemyknockback(enemy);
-                    collision.GetComponent<Doctor>().sleep();
                     gameObject.GetComponent<Swing>().triggered = true;
                     gameObject.GetComponent<Swing>().enemy = enemy;
                 }

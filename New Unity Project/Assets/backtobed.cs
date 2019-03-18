@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TitleScreenScript : MonoBehaviour
+public class backtobed : MonoBehaviour
 {
-    public GameObject TitleScreen; 
-
     // Start is called before the first frame update
     void Start()
     {

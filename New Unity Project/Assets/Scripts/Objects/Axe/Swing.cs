@@ -12,7 +12,8 @@ public class Swing : MonoBehaviour
     public GameObject door;
     [SerializeField]
     private float axeOutTime = 0.5f;
-    
+    public GameObject doctor;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,9 @@ public class Swing : MonoBehaviour
                     {
                         if (axe.selected)
                         {
+               
+                            enemy.GetComponent<Doctor>().takeHealth(50);
+                            enemy.GetComponent<Doctor>().sleep();
                             gameObject.GetComponent<KnockBack>().enemyknockback(enemy);
                             gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Objects";
                             StartCoroutine(outTimer());

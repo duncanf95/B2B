@@ -9,7 +9,9 @@ public class Doctor : MonoBehaviour
     [SerializeField]
     private float speed;
     [SerializeField]
-    float sleepTime = 1.0f;
+    private float sleepTime = 1.0f;
+    [SerializeField]
+    private float health = 100;
 
     private Vector2 direction;
     private Transform target;
@@ -128,5 +130,15 @@ public class Doctor : MonoBehaviour
 
         yield return new WaitForSeconds(sleepTime);
         hit = false;
+    }
+
+    public void takeHealth(float h)
+    {
+        health -= h;
+
+        if(health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
