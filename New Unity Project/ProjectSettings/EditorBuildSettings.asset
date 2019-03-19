@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/B2B.unity
     guid: 97055237887413b459a4f35145f6b908
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: da11473905142124c9156af1764b0709
   m_configObjects: {}

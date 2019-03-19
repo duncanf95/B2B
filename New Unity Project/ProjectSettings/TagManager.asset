@@ -22,6 +22,7 @@ TagManager:
   - Fuse
   - FuseBox
   - Syringe
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -82,4 +83,7 @@ TagManager:
     locked: 0
   - name: Roof
     uniqueID: 3920056699
+    locked: 0
+  - name: Collectable
+    uniqueID: 3653382877
     locked: 0
