@@ -1,0 +1,14 @@
+<?xml version ="1.0" encoding ="utf-8"?>
+<CreditsList>
+  <credits>
+    <credit xmlns="LucyMcnab">
+      <name>LucyMcnab</name>
+      <killed>false</killed>
+    </credit>
+
+    <credit xmlns="JoeGreen">
+      <name>JoeGreen</name>
+      <killed>false</killed>
+    </credit>
+  </credits>
+</CreditsList>
